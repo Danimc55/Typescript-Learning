@@ -28,9 +28,10 @@ var worker = /** @class */ (function () {
 }());
 var workers = [new worker('Danijel', 0, false), new worker('Goran', 2, true)];
 workers.forEach(function (worker) {
+    //String interpolation/formatting
     console.log("".concat(worker.name, " ").concat(worker.isOnShift));
 });
-console.log("\n");
+console.log('\n');
 //Multiple types for single variable
 function combineOrAdd(i1, i2) {
     var result;
@@ -42,5 +43,11 @@ function combineOrAdd(i1, i2) {
     }
     return (result);
 }
+//Test
 console.log(combineOrAdd(10, 20));
 console.log(combineOrAdd("10", "20"));
+console.log("\n");
+var array = [10, 20, 30, 40, 50];
+array.forEach(function (element) {
+    console.log(element);
+});

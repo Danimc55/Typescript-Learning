@@ -33,13 +33,15 @@ workers.forEach(worker => {
     console.log(`${worker.name} ${worker.isOnShift}`);
 }); 
 
-console.log("\n");
+console.log('\n');
 
 
+//Custom types
+type combinable = number | string;
 
 //Multiple types for single variable
 
-function combineOrAdd(i1: string | number, i2: string|number){
+function combineOrAdd(i1: combinable, i2: combinable){
     let result;
     if(typeof i1 === 'number' && typeof i2 === 'number'){
         result = i1 + i1;
@@ -49,9 +51,13 @@ function combineOrAdd(i1: string | number, i2: string|number){
     return(result);
 }
 
-
+//Test
 console.log(combineOrAdd(10,20));
 console.log(combineOrAdd("10","20"));
 
+console.log("\n")
 
-
+const array: number[] = [10,20,30,40,50]
+array.forEach(element => {
+    console.log(element)
+});
