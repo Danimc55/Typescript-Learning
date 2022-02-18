@@ -17,6 +17,7 @@ var person = {
     'role': [123124, 'string'],
     'test': role.worker
 };
+//Fooling around with some classes and types
 var worker = /** @class */ (function () {
     function worker(name, workerNumber, isOnShift) {
         this.name = name;
@@ -27,5 +28,19 @@ var worker = /** @class */ (function () {
 }());
 var workers = [new worker('Danijel', 0, false), new worker('Goran', 2, true)];
 workers.forEach(function (worker) {
-    console.log(worker.name);
+    console.log("".concat(worker.name, " ").concat(worker.isOnShift));
 });
+console.log("\n");
+//Multiple types for single variable
+function combineOrAdd(i1, i2) {
+    var result;
+    if (typeof i1 === 'number' && typeof i2 === 'number') {
+        result = i1 + i1;
+    }
+    else {
+        result = i1.toString() + i2.toString();
+    }
+    return (result);
+}
+console.log(combineOrAdd(10, 20));
+console.log(combineOrAdd("10", "20"));

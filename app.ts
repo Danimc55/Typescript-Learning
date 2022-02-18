@@ -29,7 +29,29 @@ class worker{
 
 let workers = [new worker('Danijel', 0, false), new worker('Goran', 2, true)];
 workers.forEach(worker => {
-    console.log(worker.name);
+    //String interpolation/formatting
+    console.log(`${worker.name} ${worker.isOnShift}`);
 }); 
+
+console.log("\n");
+
+
+
+//Multiple types for single variable
+
+function combineOrAdd(i1: string | number, i2: string|number){
+    let result;
+    if(typeof i1 === 'number' && typeof i2 === 'number'){
+        result = i1 + i1;
+    }else{
+        result = i1.toString() + i2.toString();
+    }
+    return(result);
+}
+
+
+console.log(combineOrAdd(10,20));
+console.log(combineOrAdd("10","20"));
+
 
 
